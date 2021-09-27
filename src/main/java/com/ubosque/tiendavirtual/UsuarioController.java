@@ -28,11 +28,11 @@ public class UsuarioController {
 	@PostMapping
 	public Usuario createUser() {
 		Usuario usuario = new Usuario();
-		usuario.setCedulaUsuario(4543334);
-		usuario.setEmailUsuario("usuario2@prueba.com");
-		usuario.setNombreUsuario("usuario2");
-		usuario.setPassword("345");
-		usuario.setUsuario("usuario2");
+		usuario.setCedulaUsuario(0);
+		usuario.setEmailUsuario("usuario@prueba.com");
+		usuario.setNombreUsuario("usuario");
+		usuario.setPassword("admin123456");
+		usuario.setUsuario("admininicial");
 		usuarioDAO.saveUser(usuario);
 		return usuario;
 	}
@@ -49,11 +49,11 @@ public class UsuarioController {
 	@PutMapping
 	public Usuario updateUser() {
 		Usuario usuario = new Usuario();
-		usuario.setCedulaUsuario(4543334);
-		usuario.setEmailUsuario("usuariomod@prueba.com");
-		usuario.setNombreUsuario("usuariomod");
-		usuario.setPassword("345");
-		usuario.setUsuario("usuariomod");
+		usuario.setCedulaUsuario(2);
+		usuario.setEmailUsuario("usuario2mod@prueba.com");
+		usuario.setNombreUsuario("usuario2mod");
+		usuario.setPassword("234mod");
+		usuario.setUsuario("usuario2mod");
 		usuarioDAO.updateUser(usuario);
 		return usuario;
 	}

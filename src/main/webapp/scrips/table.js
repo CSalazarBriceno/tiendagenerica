@@ -108,7 +108,6 @@ $('table').on('click', '.btnEliminar', function(){
 		//}
 	})
 	location.reload();
-	//Averiguar un javascript que recargue y vuelva a dibujar la tabla
 })
 
 //PUT = Actualizar, UPDATE

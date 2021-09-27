@@ -76,11 +76,13 @@ public class UsuarioDAO {
 	public void updateUser(Usuario usuario) {
 		Connection connection = new Connection();
 		try {
-			String query= "UPDATE usuarios SET email_usuario=?, nombre_usuario=? WHERE cedula_usuario=?";
+			String query= "UPDATE usuarios SET email_usuario=?, nombre_usuario=?, password=?, usuario=? WHERE cedula_usuario=?";
 			PreparedStatement statement = connection.getConnection().prepareStatement(query);
 			statement.setString(1, usuario.getEmailUsuario());
 			statement.setString(2, usuario.getNombreUsuario());
-			statement.setInt(3, usuario.getCedulaUsuario());
+			statement.setString(3, usuario.getPassword());
+			statement.setString(4, usuario.getUsuario());
+			statement.setInt(5, usuario.getCedulaUsuario());
 			statement.executeUpdate();
 		}catch(SQLException e) {
 			e.getMessage();
